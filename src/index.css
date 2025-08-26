@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply bg-black text-white;
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Elegant Title with Color Glitch */
+  .elegant-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #22c55e 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 8px rgba(34, 197, 94, 0.3);
+    animation: colorGlitch 4s ease-in-out infinite;
+  }
+  
+  @keyframes colorGlitch {
+    0%, 100% { 
+      background-position: 0% 50%;
+      filter: hue-rotate(0deg);
+    }
+    25% { 
+      background-position: 100% 50%;
+      filter: hue-rotate(5deg);
+    }
+    50% { 
+      background-position: 50% 100%;
+      filter: hue-rotate(-3deg);
+    }
+    75% { 
+      background-position: 50% 0%;
+      filter: hue-rotate(2deg);
+    }
+  }
+  
+  /* Gradient Text with Glitch */
+  .gradient-text {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #22c55e 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease-in-out infinite;
+  }
+  
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  /* Glass Effect with Color Glance */
+  .elegant-glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    animation: glassGlitch 6s ease-in-out infinite;
+  }
+  
+  @keyframes glassGlitch {
+    0%, 100% { 
+      border-color: rgba(34, 197, 94, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    25% { 
+      border-color: rgba(34, 197, 94, 0.4);
+      box-shadow: 0 8px 32px rgba(34, 197, 94, 0.1);
+    }
+    50% { 
+      border-color: rgba(22, 163, 74, 0.3);
+      box-shadow: 0 8px 32px rgba(22, 163, 74, 0.1);
+    }
+    75% { 
+      border-color: rgba(34, 197, 94, 0.5);
+      box-shadow: 0 8px 32px rgba(34, 197, 94, 0.15);
+    }
+  }
+  
+  /* Elegant Cards with Color Glance */
+  .elegant-card {
+    @apply relative overflow-hidden rounded-2xl p-6 bg-gray-900/50 shadow-lg transition-all duration-500;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    backdrop-filter: blur(10px);
+    animation: cardGlitch 8s ease-in-out infinite;
+  }
+  
+  @keyframes cardGlitch {
+    0%, 100% { 
+      border-color: rgba(34, 197, 94, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    33% { 
+      border-color: rgba(34, 197, 94, 0.4);
+      box-shadow: 0 8px 32px rgba(34, 197, 94, 0.1);
+    }
+    66% { 
+      border-color: rgba(22, 163, 74, 0.3);
+      box-shadow: 0 8px 32px rgba(22, 163, 74, 0.1);
+    }
+  }
+  
+  .elegant-card:hover {
+    transform: translateY(-8px);
+    border: 1px solid rgba(34, 197, 94, 0.6);
+    box-shadow: 0 20px 40px rgba(34, 197, 94, 0.3);
+    animation: none;
+  }
+  
+  /* Elegant Buttons with Color Glitch */
+  .elegant-button {
+    @apply relative overflow-hidden px-8 py-4 rounded-2xl font-semibold transition-all duration-500;
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #22c55e 100%);
+    background-size: 200% 200%;
+    color: white;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+    animation: buttonGlitch 5s ease-in-out infinite;
+  }
+  
+  @keyframes buttonGlitch {
+    0%, 100% { 
+      background-position: 0% 50%;
+      box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+    }
+    50% { 
+      background-position: 100% 50%;
+      box-shadow: 0 4px 15px rgba(22, 163, 74, 0.6);
+    }
+  }
+  
+  .elegant-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.8);
+    animation: none;
+  }
+  
+  .elegant-button-outline {
+    @apply relative overflow-hidden px-8 py-4 rounded-2xl font-semibold transition-all duration-500;
+    background: transparent;
+    color: #22c55e;
+    border: 2px solid #22c55e;
+    animation: outlineGlitch 4s ease-in-out infinite;
+  }
+  
+  @keyframes outlineGlitch {
+    0%, 100% { 
+      border-color: #22c55e;
+      color: #22c55e;
+    }
+    50% { 
+      border-color: #16a34a;
+      color: #16a34a;
+    }
+  }
+  
+  .elegant-button-outline:hover {
+    background: #22c55e;
+    color: white;
+    transform: translateY(-2px);
+    animation: none;
+  }
+  
+  /* Retro Grid Background with Color Glance */
+  .retro-grid {
+    background-image: 
+      linear-gradient(rgba(34, 197, 94, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 197, 94, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridGlitch 10s ease-in-out infinite;
+  }
+  
+  @keyframes gridGlitch {
+    0%, 100% { 
+      opacity: 0.3;
+      filter: hue-rotate(0deg);
+    }
+    25% { 
+      opacity: 0.4;
+      filter: hue-rotate(5deg);
+    }
+    50% { 
+      opacity: 0.35;
+      filter: hue-rotate(-3deg);
+    }
+    75% { 
+      opacity: 0.45;
+      filter: hue-rotate(2deg);
+    }
+  }
+  
+  /* Progress Bars with Color Glitch */
+  .retro-progress {
+    @apply w-full bg-gray-800 rounded-full h-4 relative overflow-hidden;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    animation: progressGlitch 3s ease-in-out infinite;
+  }
+  
+  @keyframes progressGlitch {
+    0%, 100% { border-color: rgba(34, 197, 94, 0.3); }
+    50% { border-color: rgba(22, 163, 74, 0.5); }
+  }
+  
+  .retro-progress-bar {
+    @apply h-full rounded-full relative;
+    background: linear-gradient(90deg, #22c55e, #16a34a, #22c55e);
+    background-size: 200% 100%;
+    animation: progressGlow 2s ease-in-out infinite, progressShift 4s ease-in-out infinite;
+  }
+  
+  @keyframes progressGlow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+  
+  @keyframes progressShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  /* Floating Animation with Color Glance */
+  .retro-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  /* Pulse Animation with Color Glitch */
+  .retro-pulse {
+    animation: pulse 2s ease-in-out infinite, pulseGlitch 4s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { 
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+    }
+    50% { 
+      box-shadow: 0 0 40px rgba(34, 197, 94, 0.8);
+    }
+  }
+  
+  @keyframes pulseGlitch {
+    0%, 100% { 
+      filter: hue-rotate(0deg);
+    }
+    25% { 
+      filter: hue-rotate(5deg);
+    }
+    50% { 
+      filter: hue-rotate(-3deg);
+    }
+    75% { 
+      filter: hue-rotate(2deg);
+    }
+  }
+  
+  /* Typing Effect with Color Glitch */
+  .retro-typing {
+    overflow: hidden;
+    border-right: 3px solid #22c55e;
+    white-space: nowrap;
+    font-family: 'JetBrains Mono', monospace;
+    animation: typing 3.5s steps(40, end), blink 1s step-end infinite, typingGlitch 6s ease-in-out infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #22c55e; }
+  }
+  
+  @keyframes typingGlitch {
+    0%, 100% { 
+      color: #22c55e;
+      border-color: #22c55e;
+    }
+    25% { 
+      color: #16a34a;
+      border-color: #16a34a;
+    }
+    50% { 
+      color: #22c55e;
+      border-color: #22c55e;
+    }
+    75% { 
+      color: #15803d;
+      border-color: #15803d;
+    }
+  }
+
+  /* Staggered Animation Utilities */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+
+  /* Fade in up animation */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Scale in animation */
+  .scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+
+  @keyframes scaleIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Slide in from left */
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    animation: slideInLeft 0.7s ease-out forwards;
+  }
+
+  @keyframes slideInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Slide in from right */
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(60px);
+    animation: slideInRight 0.7s ease-out forwards;
+  }
+
+  @keyframes slideInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+/* Custom Scrollbar with Color Glitch */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #22c55e, #16a34a, #22c55e);
+  background-size: 200% 200%;
+  border-radius: 4px;
+  animation: scrollbarGlitch 5s ease-in-out infinite;
+}
+
+@keyframes scrollbarGlitch {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #16a34a, #15803d, #16a34a);
+  background-size: 200% 200%;
+  animation: scrollbarGlitch 2s ease-in-out infinite;
+}
+
+/* Selection with Color Glitch */
+::selection {
+  background: rgba(34, 197, 94, 0.3);
+  color: #ffffff;
+  animation: selectionGlitch 0.5s ease-in-out;
+}
+
+@keyframes selectionGlitch {
+  0% { background: rgba(34, 197, 94, 0.3); }
+  50% { background: rgba(22, 163, 74, 0.4); }
+  100% { background: rgba(34, 197, 94, 0.3); }
+}
+
+/* Focus Styles with Color Glitch */
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.3);
+  animation: focusGlitch 0.3s ease-in-out;
+}
+
+@keyframes focusGlitch {
+  0% { box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.3); }
+  50% { box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.5); }
+  100% { box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.3); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .elegant-title {
+    font-size: 2.5rem;
+  }
+  
+  .elegant-card {
+    padding: 1rem;
+  }
+  
+  .elegant-button, .elegant-button-outline {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .elegant-title {
+    font-size: 2rem;
+  }
+  
+  .elegant-card {
+    padding: 0.75rem;
+  }
+  
+  .elegant-button, .elegant-button-outline {
+    padding: 0.5rem 1rem;
+  }
+}
