@@ -175,7 +175,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.4, duration: 0.8 }}
-          className="flex justify-center space-x-8 mb-16"
+          className="flex justify-center space-x-8 mb-24"
         >
           <motion.a
             whileHover={{ scale: 1.1, y: -2 }}
@@ -201,34 +201,34 @@ const Hero = () => {
           <motion.a
             whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.95 }}
-                         href="mailto:mistershmope@gmail.com"
+            href="mailto:mistershmope@gmail.com"
             className="w-12 h-12 elegant-glass rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-colors duration-300 retro-pulse"
             style={{ animationDelay: '1s' }}
           >
             <Mail size={24} />
           </motion.a>
         </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.6, duration: 0.8 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <motion.button
-            onClick={scrollToAbout}
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="elegant-glass p-3 rounded-full text-green-400 hover:text-green-300 transition-colors duration-300"
-          >
-            <ChevronDown size={32} />
-          </motion.button>
-          <div className="text-gray-400 font-mono text-sm mt-2 text-center">
-            Scroll Down
-          </div>
-        </motion.div>
       </div>
+
+      {/* Scroll Indicator - Moved outside the main content div */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.6, duration: 0.8 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+      >
+        <motion.button
+          onClick={scrollToAbout}
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="elegant-glass p-3 rounded-full text-green-400 hover:text-green-300 transition-colors duration-300"
+        >
+          <ChevronDown size={32} />
+        </motion.button>
+        <div className="text-gray-400 font-mono text-sm mt-2 text-center">
+          Scroll Down
+        </div>
+      </motion.div>
     </section>
   )
 }
