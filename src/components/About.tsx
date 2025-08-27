@@ -31,10 +31,10 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="section-header">
-            ABOUT ME
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            About <span className="gradient-text">Me</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto pixel-text">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Passionate web developer with a love for creating exceptional digital experiences
           </p>
         </motion.div>
@@ -49,13 +49,13 @@ const About = () => {
           >
             {/* Profile Image Placeholder */}
             <div className="relative">
-              <div className="w-80 h-80 mx-auto rounded-full bg-gradient-to-br from-primary-500 to-primary-600 p-1 pixel-border">
+              <div className="w-80 h-80 mx-auto rounded-full bg-gradient-to-br from-primary-500 to-primary-600 p-1">
                 <div className="w-full h-full rounded-full bg-black flex items-center justify-center">
                   <User className="w-32 h-32 text-primary-500" />
                 </div>
               </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center animate-float pixel-border">
-                <span className="text-black font-bold text-lg pixel-text">24</span>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center animate-float">
+                <span className="text-black font-bold text-lg">24</span>
               </div>
             </div>
 
@@ -67,10 +67,10 @@ const About = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  className="text-center p-4 elegant-glass rounded-lg pixel-border"
+                  className="text-center p-4 glass-effect rounded-lg"
                 >
                   <stat.icon className="w-8 h-8 text-primary-500 mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-white mb-1 pixel-text">{stat.value}</div>
+                  <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-sm text-gray-400">{stat.label}</div>
                 </motion.div>
               ))}
@@ -85,7 +85,7 @@ const About = () => {
             className="space-y-6"
           >
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-white pixel-text">
+              <h3 className="text-2xl font-bold mb-4 text-white">
                 Who I Am
               </h3>
               <p className="text-gray-300 leading-relaxed mb-6">
