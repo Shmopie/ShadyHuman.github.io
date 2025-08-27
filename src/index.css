@@ -7,6 +7,138 @@
 @layer base {
   * {
     @apply border-gray-200;
+    cursor: none; /* Hide default cursor */
+  }
+  
+  /* 8-Bit Custom Cursor */
+  body {
+    cursor: none;
+  }
+  
+  /* Custom cursor container */
+  .custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+    z-index: 99999;
+    mix-blend-mode: difference;
+    transition: transform 0.1s ease;
+  }
+  
+  /* Main cursor dot */
+  .cursor-dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    background: #22c55e;
+    border-radius: 0;
+    box-shadow: 
+      0 0 0 1px rgba(34, 197, 94, 0.8),
+      0 0 8px rgba(34, 197, 94, 0.6),
+      0 0 16px rgba(34, 197, 94, 0.4);
+    animation: cursorPulse 2s ease-in-out infinite;
+  }
+  
+  /* Cursor trail effect */
+  .cursor-trail {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 2px;
+    height: 2px;
+    background: #16a34a;
+    border-radius: 0;
+    opacity: 0.7;
+    animation: cursorTrail 0.3s ease-out;
+  }
+  
+  /* Cursor trail 2 */
+  .cursor-trail-2 {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 1px;
+    height: 1px;
+    background: #15803d;
+    border-radius: 0;
+    opacity: 0.5;
+    animation: cursorTrail2 0.5s ease-out;
+  }
+  
+  /* Hover effect for interactive elements */
+  .custom-cursor.hover {
+    transform: scale(1.5);
+  }
+  
+  .custom-cursor.hover .cursor-dot {
+    background: #4ade80;
+    box-shadow: 
+      0 0 0 2px rgba(74, 222, 128, 0.8),
+      0 0 12px rgba(74, 222, 128, 0.8),
+      0 0 24px rgba(74, 222, 128, 0.6);
+  }
+  
+  /* Click effect */
+  .custom-cursor.clicking {
+    transform: scale(0.8);
+  }
+  
+  .custom-cursor.clicking .cursor-dot {
+    background: #fbbf24;
+    box-shadow: 
+      0 0 0 1px rgba(251, 191, 36, 0.8),
+      0 0 8px rgba(251, 191, 36, 0.8),
+      0 0 16px rgba(251, 191, 36, 0.6);
+  }
+  
+  /* Cursor animations */
+  @keyframes cursorPulse {
+    0%, 100% { 
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% { 
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+  }
+  
+  @keyframes cursorTrail {
+    0% { 
+      opacity: 0.7;
+      transform: scale(1);
+    }
+    100% { 
+      opacity: 0;
+      transform: scale(0.5);
+    }
+  }
+  
+  @keyframes cursorTrail2 {
+    0% { 
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    100% { 
+      opacity: 0;
+      transform: scale(0.3);
+    }
+  }
+  
+  /* Hide cursor on touch devices */
+  @media (hover: none) and (pointer: coarse) {
+    .custom-cursor {
+      display: none;
+    }
+    
+    * {
+      cursor: auto;
+    }
   }
   
   body {
