@@ -29,7 +29,24 @@
     <title>Shady Hayman - Web Developer</title>
   </head>
   <body>
+    <!-- 8-Bit Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-container">
+        <div class="pixel-logo">
+          <div class="pixel-text">SHADY</div>
+          <div class="pixel-text">HAYMAN</div>
+        </div>
+        <div class="loading-text">LOADING...</div>
+        <div class="pixel-progress-bar">
+          <div class="pixel-progress-fill"></div>
+        </div>
+        <div class="loading-status">INITIALIZING SYSTEM...</div>
+        <div class="pixel-grid"></div>
+      </div>
+    </div>
+    
     <div id="root"></div>
+    <script src="/loading.js"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
