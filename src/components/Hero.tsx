@@ -185,7 +185,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="w-10 h-10 sm:w-12 sm:h-12 elegant-glass rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-colors duration-300 float-animation touch-button"
           >
-            <Github size={20} className="sm:w-6 sm:h-6" />
+            <Github className="w-5 h-5 sm:w-6 sm:h-6" />
           </motion.a>
           <motion.a
             whileHover={{ scale: 1.1, y: -2 }}
@@ -196,7 +196,7 @@ const Hero = () => {
             className="w-10 h-10 sm:w-12 sm:h-12 elegant-glass rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-colors duration-300 float-animation touch-button"
             style={{ animationDelay: '0.5s' }}
           >
-            <Linkedin size={20} className="sm:w-6 sm:h-6" />
+            <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
           </motion.a>
           <motion.a
             whileHover={{ scale: 1.1, y: -2 }}
@@ -205,7 +205,7 @@ const Hero = () => {
             className="w-10 h-10 sm:w-12 sm:h-12 elegant-glass rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-colors duration-300 float-animation touch-button"
             style={{ animationDelay: '1s' }}
           >
-            <Mail size={20} className="sm:w-6 sm:h-6" />
+            <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
           </motion.a>
         </motion.div>
       </div>
