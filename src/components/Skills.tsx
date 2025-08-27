@@ -141,10 +141,10 @@ const Skills = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-                           <h2 className="text-4xl md:text-5xl font-bold mb-6 elegant-title">
-                   <span className="gradient-text">SKILLS_DATABASE.JSON</span>
-                 </h2>
-          <p className="text-xl text-cyan-300 max-w-3xl mx-auto font-mono">
+          <h2 className="section-header">
+            SKILLS_DATABASE.JSON
+          </h2>
+          <p className="text-xl text-cyan-300 max-w-3xl mx-auto font-mono pixel-text">
             <span className="text-green-400">$</span> cat skills.json | jq '.technologies[]'
           </p>
         </motion.div>

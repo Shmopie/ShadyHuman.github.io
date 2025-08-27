@@ -60,10 +60,10 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Let's <span className="gradient-text">Connect</span>
+          <h2 className="section-header">
+            LET'S CONNECT
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto pixel-text">
             Ready to start your next project? Let's discuss how I can help bring your ideas to life
           </p>
         </motion.div>

@@ -84,10 +84,10 @@ const Experience = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Work <span className="gradient-text">Experience</span>
+          <h2 className="section-header">
+            WORK EXPERIENCE
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto pixel-text">
             6 years of professional experience building innovative web solutions and leading development teams
           </p>
         </motion.div>

@@ -124,7 +124,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="text-2xl md:text-4xl text-gray-300 mb-8 font-mono uppercase tracking-widest"
+            className="text-2xl md:text-4xl text-gray-300 mb-8 font-mono uppercase tracking-widest pixel-text"
           >
             Full Stack Web Developer
           </motion.h2>

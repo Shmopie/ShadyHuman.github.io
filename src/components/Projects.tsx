@@ -83,10 +83,10 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-                           <h2 className="text-4xl md:text-5xl font-bold mb-6 elegant-title">
-                   <span className="gradient-text">PROJECTS_ARCHIVE.EXE</span>
-                 </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <h2 className="section-header">
+            PROJECTS_ARCHIVE.EXE
+          </h2>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto pixel-text">
             A showcase of my best work, demonstrating creativity, technical expertise, and problem-solving skills
           </p>
         </motion.div>
