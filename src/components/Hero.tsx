@@ -114,7 +114,7 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 1 }}
-            className="text-5xl md:text-8xl lg:text-9xl mb-6 elegant-title"
+            className="responsive-heading mb-6 elegant-title"
           >
             <span className="gradient-text block">SHADY</span>
             <span className="gradient-text block">HAYMAN</span>
@@ -124,7 +124,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="text-2xl md:text-4xl text-gray-300 mb-8 font-mono uppercase tracking-widest"
+            className="responsive-text text-gray-300 mb-8 font-mono uppercase tracking-widest"
           >
             Full Stack Web Developer
           </motion.h2>
@@ -133,9 +133,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
+            className="responsive-text text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
           >
-            <div className="elegant-glass p-6 rounded-lg">
+            <div className="elegant-glass p-4 sm:p-6 rounded-lg interactive-hover">
               Passionate about creating beautiful, functional, and user-friendly web applications. 
               With 6 years of experience in modern web technologies, I bring ideas to life through 
               clean code and innovative design solutions.
@@ -148,25 +148,25 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
-          className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+          className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-16"
         >
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToAbout}
-            className="elegant-button flex items-center space-x-2"
+            className="elegant-button flex items-center space-x-2 touch-button"
           >
             <span>Explore My Work</span>
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </motion.button>
           
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="elegant-button-outline flex items-center space-x-2"
+            className="elegant-button-outline flex items-center space-x-2 touch-button"
           >
             <span>Download Resume</span>
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </motion.button>
         </motion.div>
 
@@ -175,7 +175,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.4, duration: 0.8 }}
-          className="flex justify-center space-x-8 mb-24"
+          className="flex justify-center space-x-4 sm:space-x-8 mb-24"
         >
           <motion.a
             whileHover={{ scale: 1.1, y: -2 }}
@@ -183,9 +183,9 @@ const Hero = () => {
             href="https://github.com/shadyhayman"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-12 h-12 elegant-glass rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-colors duration-300 retro-pulse"
+            className="w-10 h-10 sm:w-12 sm:h-12 elegant-glass rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-colors duration-300 float-animation touch-button"
           >
-            <Github size={24} />
+            <Github size={20} className="sm:w-6 sm:h-6" />
           </motion.a>
           <motion.a
             whileHover={{ scale: 1.1, y: -2 }}
@@ -193,19 +193,19 @@ const Hero = () => {
             href="https://linkedin.com/in/shadyhayman"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-12 h-12 elegant-glass rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-colors duration-300 retro-pulse"
+            className="w-10 h-10 sm:w-12 sm:h-12 elegant-glass rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-colors duration-300 float-animation touch-button"
             style={{ animationDelay: '0.5s' }}
           >
-            <Linkedin size={24} />
+            <Linkedin size={20} className="sm:w-6 sm:h-6" />
           </motion.a>
           <motion.a
             whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.95 }}
             href="mailto:mistershmope@gmail.com"
-            className="w-12 h-12 elegant-glass rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-colors duration-300 retro-pulse"
+            className="w-10 h-10 sm:w-12 sm:h-12 elegant-glass rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-colors duration-300 float-animation touch-button"
             style={{ animationDelay: '1s' }}
           >
-            <Mail size={24} />
+            <Mail size={20} className="sm:w-6 sm:h-6" />
           </motion.a>
         </motion.div>
       </div>

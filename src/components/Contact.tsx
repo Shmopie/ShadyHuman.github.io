@@ -84,27 +84,27 @@ const Contact = () => {
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Name
                     </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors duration-300"
-                      placeholder="Your name"
-                      required
-                    />
+                                         <input
+                       type="text"
+                       id="name"
+                       name="name"
+                       className="interactive-input"
+                       placeholder="Your name"
+                       required
+                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email
                     </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors duration-300"
-                      placeholder="your@email.com"
-                      required
-                    />
+                                         <input
+                       type="email"
+                       id="email"
+                       name="email"
+                       className="interactive-input"
+                       placeholder="your@email.com"
+                       required
+                     />
                   </div>
                 </div>
                 
@@ -112,28 +112,28 @@ const Contact = () => {
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
                     Subject
                   </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors duration-300"
-                    placeholder="Project inquiry"
-                    required
-                  />
+                                     <input
+                     type="text"
+                     id="subject"
+                     name="subject"
+                     className="interactive-input"
+                     placeholder="Project inquiry"
+                     required
+                   />
                 </div>
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Message
                   </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors duration-300 resize-none"
-                    placeholder="Tell me about your project..."
-                    required
-                  />
+                                     <textarea
+                     id="message"
+                     name="message"
+                     rows={6}
+                     className="interactive-input resize-none"
+                     placeholder="Tell me about your project..."
+                     required
+                   />
                 </div>
                 
                 <motion.button

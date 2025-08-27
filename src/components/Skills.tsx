@@ -185,12 +185,12 @@ const Skills = () => {
                       <span className="text-sm font-medium text-cyan-300 font-mono">{skill.name}</span>
                       <span className="text-sm text-green-400 font-mono">[{skill.level}%]</span>
                     </div>
-                    <div className="retro-progress">
+                    <div className="skill-bar">
                       <motion.div
                         initial={{ width: 0 }}
                         animate={inView ? { width: `${skill.level}%` } : {}}
-                        transition={{ duration: 1, delay: categoryIndex * 0.1 + skillIndex * 0.05 }}
-                        className="retro-progress-bar"
+                        transition={{ duration: 1.5, delay: categoryIndex * 0.1 + skillIndex * 0.05, ease: "easeOut" }}
+                        className="skill-progress"
                       />
                     </div>
                   </div>
