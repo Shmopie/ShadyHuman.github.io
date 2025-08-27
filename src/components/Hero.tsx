@@ -210,22 +210,22 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator - Moved outside the main content div */}
+      {/* Scroll Indicator - Centered and properly positioned */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.6, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center justify-center"
       >
         <motion.button
           onClick={scrollToAbout}
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="elegant-glass p-3 rounded-full text-green-400 hover:text-green-300 transition-colors duration-300"
+          className="elegant-glass p-3 rounded-full text-green-400 hover:text-green-300 transition-colors duration-300 flex items-center justify-center"
         >
           <ChevronDown size={32} />
         </motion.button>
-        <div className="text-gray-400 font-mono text-sm mt-2 text-center">
+        <div className="text-gray-400 font-mono text-sm mt-2 text-center w-full">
           Scroll Down
         </div>
       </motion.div>
