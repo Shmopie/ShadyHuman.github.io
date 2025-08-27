@@ -83,7 +83,7 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 animated-gradient-text">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 animated-gradient-text pixel-glitch" data-text="PROJECTS_ARCHIVE.EXE">
             PROJECTS_ARCHIVE.EXE
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">

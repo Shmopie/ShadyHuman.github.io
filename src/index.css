@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Press+Start+2P&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -22,50 +22,128 @@
 }
 
 @layer components {
-  /* Animated Gradient Text for Headers */
+  /* 8-Bit Animated Gradient Text for Headers */
   .animated-gradient-text {
+    font-family: 'Press Start 2P', monospace;
     background: linear-gradient(
       45deg,
       #22c55e,
-      #3b82f6,
-      #8b5cf6,
-      #ec4899,
-      #f59e0b,
-      #ef4444,
+      #16a34a,
+      #15803d,
+      #166534,
+      #14532d,
       #22c55e
     );
-    background-size: 400% 400%;
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradientShift 6s ease-in-out infinite;
+    animation: pixelGradientShift 4s ease-in-out infinite;
     font-weight: 700;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+    position: relative;
   }
 
-  @keyframes gradientShift {
+  .animated-gradient-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      45deg,
+      #22c55e,
+      #16a34a,
+      #15803d,
+      #166534,
+      #14532d,
+      #22c55e
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pixelGradientShift 4s ease-in-out infinite;
+    filter: blur(1px);
+    opacity: 0.7;
+    z-index: -1;
+  }
+
+  @keyframes pixelGradientShift {
     0%, 100% { 
       background-position: 0% 50%;
-      filter: hue-rotate(0deg);
+      transform: translateX(0);
     }
-    16.66% { 
-      background-position: 100% 50%;
-      filter: hue-rotate(60deg);
+    10% { 
+      background-position: 20% 50%;
+      transform: translateX(-1px);
     }
-    33.33% { 
-      background-position: 50% 100%;
-      filter: hue-rotate(120deg);
+    20% { 
+      background-position: 40% 50%;
+      transform: translateX(1px);
+    }
+    30% { 
+      background-position: 60% 50%;
+      transform: translateX(-1px);
+    }
+    40% { 
+      background-position: 80% 50%;
+      transform: translateX(1px);
     }
     50% { 
-      background-position: 100% 0%;
-      filter: hue-rotate(180deg);
+      background-position: 100% 50%;
+      transform: translateX(0);
     }
-    66.66% { 
-      background-position: 0% 100%;
-      filter: hue-rotate(240deg);
+    60% { 
+      background-position: 80% 50%;
+      transform: translateX(-1px);
     }
-    83.33% { 
-      background-position: 50% 0%;
-      filter: hue-rotate(300deg);
+    70% { 
+      background-position: 60% 50%;
+      transform: translateX(1px);
+    }
+    80% { 
+      background-position: 40% 50%;
+      transform: translateX(-1px);
+    }
+    90% { 
+      background-position: 20% 50%;
+      transform: translateX(1px);
+    }
+  }
+
+  /* 8-Bit Glitch Effect */
+  .pixel-glitch {
+    position: relative;
+    animation: pixelGlitch 3s infinite;
+  }
+
+  @keyframes pixelGlitch {
+    0%, 100% { 
+      transform: translate(0);
+      filter: hue-rotate(0deg);
+    }
+    10% { 
+      transform: translate(-2px, 2px);
+      filter: hue-rotate(5deg);
+    }
+    20% { 
+      transform: translate(2px, -2px);
+      filter: hue-rotate(-3deg);
+    }
+    30% { 
+      transform: translate(-1px, 1px);
+      filter: hue-rotate(8deg);
+    }
+    40% { 
+      transform: translate(1px, -1px);
+      filter: hue-rotate(-5deg);
+    }
+    50% { 
+      transform: translate(0);
+      filter: hue-rotate(0deg);
     }
   }
 

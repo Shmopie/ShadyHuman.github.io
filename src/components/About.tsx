@@ -31,7 +31,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 animated-gradient-text">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 animated-gradient-text pixel-glitch" data-text="About Me">
             About Me
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
