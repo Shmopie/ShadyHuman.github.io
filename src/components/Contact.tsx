@@ -211,14 +211,14 @@ const Contact = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 1 }}
-              className="glass-effect rounded-xl p-8 text-center"
+              className="glass-effect rounded-xl p-8 text-center flex flex-col items-center justify-center"
             >
-              <h3 className="text-xl font-bold text-white mb-4">Current Availability</h3>
+              <h3 className="text-xl font-bold text-white mb-4 text-center">Current Availability</h3>
               <div className="flex items-center justify-center space-x-2 mb-4">
                 <div className="w-3 h-3 bg-primary-500 rounded-full animate-pulse" />
                 <span className="text-primary-500 font-semibold">Available for new projects</span>
               </div>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-sm text-center max-w-md">
                 I'm currently accepting new client work and would love to hear about your project.
               </p>
             </motion.div>
