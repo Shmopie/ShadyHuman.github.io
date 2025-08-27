@@ -48,8 +48,8 @@ class CustomCursor {
   move(x, y) {
     if (!this.isVisible) return;
     
-    // Smooth cursor movement
-    this.cursor.style.transform = `translate(${x - 8}px, ${y - 8}px)`;
+    // Smooth cursor movement - position arrow tip at mouse position
+    this.cursor.style.transform = `translate(${x}px, ${y}px)`;
     
     // Create trail effect
     this.createTrail(x, y);
@@ -61,13 +61,13 @@ class CustomCursor {
     const trail2 = this.cursorTrail2.cloneNode(true);
     
     trail.style.position = 'fixed';
-    trail.style.left = `${x - 7}px`;
-    trail.style.top = `${y - 7}px`;
+    trail.style.left = `${x - 4}px`;
+    trail.style.top = `${y - 6}px`;
     trail.style.pointerEvents = 'none';
     trail.style.zIndex = '99998';
     
     trail2.style.position = 'fixed';
-    trail2.style.left = `${x - 8}px`;
+    trail2.style.left = `${x - 6}px`;
     trail2.style.top = `${y - 8}px`;
     trail2.style.pointerEvents = 'none';
     trail2.style.zIndex = '99997';
