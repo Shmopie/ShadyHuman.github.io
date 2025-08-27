@@ -175,7 +175,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.4, duration: 0.8 }}
-          className="flex justify-center space-x-4 sm:space-x-8 mb-24"
+          className="flex justify-center space-x-4 sm:space-x-8 mb-24 relative z-30"
         >
           <motion.a
             whileHover={{ scale: 1.1, y: -2 }}
@@ -183,9 +183,9 @@ const Hero = () => {
             href="https://github.com/shadyhayman"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 sm:w-12 sm:h-12 elegant-glass rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-colors duration-300 float-animation touch-button"
+            className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-all duration-300 border border-green-400/30 hover:border-green-400/60"
           >
-            <Github className="w-5 h-5 sm:w-6 sm:h-6" />
+            <Github size={24} />
           </motion.a>
           <motion.a
             whileHover={{ scale: 1.1, y: -2 }}
@@ -193,19 +193,19 @@ const Hero = () => {
             href="https://linkedin.com/in/shadyhayman"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 sm:w-12 sm:h-12 elegant-glass rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-colors duration-300 float-animation touch-button"
+            className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-all duration-300 border border-green-400/30 hover:border-green-400/60"
             style={{ animationDelay: '0.5s' }}
           >
-            <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
+            <Linkedin size={24} />
           </motion.a>
           <motion.a
             whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.95 }}
             href="mailto:mistershmope@gmail.com"
-            className="w-10 h-10 sm:w-12 sm:h-12 elegant-glass rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-colors duration-300 float-animation touch-button"
+            className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-all duration-300 border border-green-400/30 hover:border-green-400/60"
             style={{ animationDelay: '1s' }}
           >
-            <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
+            <Mail size={24} />
           </motion.a>
         </motion.div>
       </div>
