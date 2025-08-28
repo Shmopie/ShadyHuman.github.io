@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
+import TechnicalBackground from './components/TechnicalBackground'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
@@ -24,7 +25,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'contact']
+      const sections = ['home', 'about', 'skills', 'technical-background', 'projects', 'experience', 'contact']
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -63,6 +64,7 @@ function App() {
             <Hero />
             <About />
             <Skills />
+            <TechnicalBackground />
             <Projects />
             <Experience />
             <Contact />
