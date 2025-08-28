@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ChevronDown, ArrowRight, Github, Linkedin, Mail } from 'lucide-react'
+import { ChevronDown, ArrowRight, Github, Linkedin, ExternalLink } from 'lucide-react'
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -201,11 +201,13 @@ const Hero = () => {
           <motion.a
             whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.95 }}
-            href="mailto:mistershmope@gmail.com"
+            href="https://www.fiverr.com/shmopie"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-all duration-300 border border-green-400/30 hover:border-green-400/60"
             style={{ animationDelay: '1s' }}
           >
-            <Mail size={24} />
+            <ExternalLink size={24} />
           </motion.a>
         </motion.div>
       </div>

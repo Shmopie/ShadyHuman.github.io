@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink } from 'lucide-react'
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -43,10 +43,10 @@ const Contact = () => {
       color: 'hover:text-blue-400'
     },
     {
-      icon: Twitter,
-      name: 'Twitter',
-      url: 'https://twitter.com/shadyhayman',
-      color: 'hover:text-blue-400'
+      icon: ExternalLink,
+      name: 'Fiverr',
+      url: 'https://www.fiverr.com/shmopie',
+      color: 'hover:text-green-400'
     }
   ]
 
