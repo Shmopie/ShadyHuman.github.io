@@ -3,8 +3,6 @@ class CustomCursor {
   constructor() {
     this.cursor = document.getElementById('custom-cursor');
     this.cursorDot = this.cursor.querySelector('.cursor-dot');
-    this.cursorTrail = this.cursor.querySelector('.cursor-trail');
-    this.cursorTrail2 = this.cursor.querySelector('.cursor-trail-2');
     this.isVisible = false;
     this.isHovering = false;
     this.isClicking = false;
@@ -50,37 +48,9 @@ class CustomCursor {
     
     // Smooth cursor movement - position arrow tip at mouse position
     this.cursor.style.transform = `translate(${x}px, ${y}px)`;
-    
-    // Create trail effect
-    this.createTrail(x, y);
   }
 
-  createTrail(x, y) {
-    // Clone trail elements for effect
-    const trail = this.cursorTrail.cloneNode(true);
-    const trail2 = this.cursorTrail2.cloneNode(true);
-    
-    trail.style.position = 'fixed';
-    trail.style.left = `${x - 4}px`;
-    trail.style.top = `${y - 6}px`;
-    trail.style.pointerEvents = 'none';
-    trail.style.zIndex = '99998';
-    
-    trail2.style.position = 'fixed';
-    trail2.style.left = `${x - 6}px`;
-    trail2.style.top = `${y - 8}px`;
-    trail2.style.pointerEvents = 'none';
-    trail2.style.zIndex = '99997';
-    
-    document.body.appendChild(trail);
-    document.body.appendChild(trail2);
-    
-    // Remove trail elements after animation
-    setTimeout(() => {
-      if (trail.parentNode) trail.parentNode.removeChild(trail);
-      if (trail2.parentNode) trail2.parentNode.removeChild(trail2);
-    }, 500);
-  }
+
 
   show() {
     this.isVisible = true;
