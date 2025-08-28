@@ -22,7 +22,7 @@ const TechnicalBackground = () => {
       title: 'World of Warcraft Development',
       icon: Gamepad2,
       color: 'from-purple-500 to-pink-500',
-      description: '3 years of private server development',
+      description: '2+ years of private server development',
       skills: [
         'Custom Script Systems',
         'Database Management',
@@ -35,7 +35,7 @@ const TechnicalBackground = () => {
         'Guild Systems',
         'Auction House'
       ],
-      details: 'Extensive experience developing custom scripts and systems for WoW private servers, including player progression, economy management, and complex game mechanics.'
+      details: 'Ongoing development of custom scripts and systems for WoW private servers, including player progression, economy management, and complex game mechanics.'
     },
     {
       title: 'Software Development',
@@ -233,10 +233,10 @@ const TechnicalBackground = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-white mb-2">WoW Private Server Development</h4>
-                  <p className="text-green-400 font-mono text-sm mb-2">3 Years • 2020-2023</p>
+                  <p className="text-green-400 font-mono text-sm mb-2">2+ Years • 2022-Present</p>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    Developed custom scripts and systems for World of Warcraft private servers, including player progression systems, 
-                    economy management, quest systems, and complex game mechanics. Managed server architecture and database optimization.
+                    Developing custom scripts and systems for World of Warcraft private servers, including player progression systems, 
+                    economy management, quest systems, and complex game mechanics. Managing server architecture and database optimization.
                   </p>
                 </div>
               </motion.div>
